@@ -107,9 +107,17 @@
         window.onload = function () {
             var url = "./header.html";
             var xmlhttp = new XMLHttpRequest();
-            xmlhttp.open("GET", url, false);
+            xmlhttp.onreadystatechange=state_Change;
+            xmlhttp.open("GET", url, true);
             xmlhttp.send(null);
-            document.getElementsByTagName("header")[0].innerHTML = xmlhttp.responseText;
+        }
+        function state_Change()
+        {
+            // 4 = "loaded"  200 = "OK"
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                document.getElementsByTagName("header")[0].innerHTML = xmlhttp.responseText;
+            }
         }
     </script>
 

@@ -107,8 +107,8 @@
   </style>
 
   <script type="text/javascript">
+    var xmlhttp = new XMLHttpRequest();
     window.onload = function () {
-      var xmlhttp = new XMLHttpRequest();
       var url = "./header.html";
       xmlhttp.onreadystatechange = state_Change;
       xmlhttp.open("GET", url, true);

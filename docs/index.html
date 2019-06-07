@@ -5,143 +5,19 @@
   <meta charset="utf-8">
   <title>虚幻4文档</title>
   <base target="_blank" />
-  <style type="text/css">
-    body {
-      margin: 0px;
-      font-family: "Microsoft Yahei";
-    }
 
-    /* 导航 */
-    header {
-      position: fixed;
-      top: 0px;
-      width: 100%;
-      height: 40px;
+  <link rel="stylesheet" href="layout2.css" />
+  <link rel="stylesheet" href="contents.css" />
 
-      background-color: black;
-
-      line-height: 40px;
-      color: lightgray;
-      font-size: 18px;
-    }
-
-    header a {
-      display: inline-block;
-      padding-left: 10px;
-
-      color: lightgray;
-    }
-
-    /* 内容 */
-    #content {
-      position: fixed;
-      top: 40px;
-      bottom: 0px;
-      width: 100%;
-
-      background-color: lightgray;
-    }
-  </style>
-
-  <style type="text/css">
-    #contents {
-      position: absolute;
-      top: 0px;
-      bottom: 0px;
-
-      width: 500px;
-
-      overflow-x: hidden;
-      overflow-y: scroll;
-
-    }
-
-    /* 卡片容器 */
-    #contents ul {
-      margin-top:0px;
-      margin-bottom:0px;
-      margin-left: 20px;
-      padding: 0px;
-    }
-
-    #contents .close>ul {
-      display: none;
-    }
-
-    /* 卡片 */
-    #contents div {
-      -webkit-user-select: none;
-    }
-
-    #contents div:hover {
-      background-color: skyblue;
-    }
-
-    #contents li {
-      list-style-image: url(./button.png);
-    }
-
-    #contents li.close {
-      list-style-image: url(./button-closed.png);
-    }
-
-    #contents li.open {
-      list-style-image: url(./button-open.png);
-    }
-
-
-    /* 卡片内容 */
-    #contents a {
-      color: blue;
-      line-height: 26px;
-      font-size: 14px;
-    }
-
-    #contents a:link {
-      text-decoration: none;
-    }
-
-    #contents a:hover {
-      text-decoration: underline;
-    }
-  </style>
-
-  <script type="text/javascript">
-    var xmlhttp = new XMLHttpRequest();
-    window.onload = function () {
-      var url = "./header.html";
-      xmlhttp.onreadystatechange = state_Change;
-      xmlhttp.open("GET", url, true);
-      xmlhttp.send(null);
-    }
-    function state_Change() {
-      // 4 = "loaded"  200 = "OK"
-      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        document.getElementsByTagName("header")[0].innerHTML = xmlhttp.responseText;
-      }
-    }
-  </script>
-
-
-  <script type="text/javascript">
-    function OnClk() {
-      var ele = event.target.parentNode;
-      var attr = ele.getAttribute("class");
-      if (attr == "close") {
-        ele.setAttribute("class", "open");
-      }
-      else if (attr == "open") {
-        ele.setAttribute("class", "close");
-      }
-    }
-  </script>
+  <script type="text/javascript" src="layout2.js"></script>
+  <script type="text/javascript" src="contents.js"></script>
 </head>
 
 <body>
   <header>
   </header>
   <div id="content">
-    <div id="contents" onclick="OnClk()">
+    <div id="contents" onclick="OnClkCard()">
       <ul>
         <li class="close">
           <div>

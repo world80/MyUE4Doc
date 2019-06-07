@@ -1,0 +1,58 @@
+/* 目录 */
+#contents {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+
+    width: 500px;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+  }
+
+  /* 卡片容器 */
+  #contents ul {
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-left: 20px;
+    padding: 0px;
+  }
+
+  #contents .close>ul {
+    display: none;
+  }
+
+  /* 卡片 */
+  #contents div {
+    -webkit-user-select: none;
+  }
+
+  #contents div:hover {
+    background-color: skyblue;
+  }
+
+  #contents li {
+    list-style-image: url(./button.png);
+  }
+
+  #contents li.close {
+    list-style-image: url(./button-closed.png);
+  }
+
+  #contents li.open {
+    list-style-image: url(./button-open.png);
+  }
+
+
+  /* 卡片内容 */
+  #contents a {
+    color: blue;
+    line-height: 26px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  #contents a:hover {
+    text-decoration: underline;
+  }

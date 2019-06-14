@@ -27,6 +27,13 @@ header a {
     color: lightgray;
 }
 
+header a.current {
+    background-color: lightgray;
+
+    color: black;
+
+    pointer-events: none;
+}
 header a:hover {
     background-color: darkgray;
 
@@ -34,11 +41,6 @@ header a:hover {
     color: blue;
 }
 
-header a.current {
-    background-color: lightgray;
-
-    color: black;
-}
 
 /* 内容 */
 #content {

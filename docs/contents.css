@@ -3,11 +3,10 @@
     position: absolute;
     top: 0px;
     bottom: 0px;
-
     width: 500px;
-
     overflow-x: hidden;
     overflow-y: scroll;
+    background-color:whitesmoke;
 
   }
 

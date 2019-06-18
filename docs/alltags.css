@@ -1,60 +1,63 @@
- /* 所有分类 */
-    .alltags {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      overflow-x: auto;
-      overflow-y: auto;
-    }
+ul{
+  margin:0px;
+  padding:0px;
 
-    /* 单个分类 */
-    .tag {
-      float: left;
-      margin: 5px;
-      width: 200px;
-      background-color: white;
-    }
+  list-style: none;
+}
 
-    /* 分类 - 标题 */
-    .tag>.title {
-      height: 30px;
-      background-color: black;
+/* 目录2 */
+.contents2{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color:white;
+}
 
-      font-size: 18px;
-      line-height: 30px;
-      text-align: center;
-      color: lightgray;
-    }
+/* 标题 */
+.title > div{
+  margin-top:2px;
+  background-color: black;
 
-    /* 分类 - 标题2*/
-    .tag>.subtitle {
-      background-color: dimgray;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color:lightgray;
+}
 
-      font-size: 14px;
-      line-height: 25px;
-      text-align: center;
-      color: lightgray;
-    }
+/* 标题2 */
+.subtitle > div{
+  margin-top:2px;
+  padding-left:15px;
+  border-top:1px solid gray;
+  border-bottom:1px solid gray;
+  background-color: whitesmoke;
 
-    /* 分类 - 内容 */
-    .tag>.list>div {
-      padding-left: 10px;
-      background-color: white;
+  font-size: 12px;
+  line-height: 20px;
+  color: gray;
 
-    }
+}
 
-    .tag>.list>div:hover {
-      background-color: skyblue;
+/* 内容 */
+.subtitle li{
+  padding-left:15px;
+  background-color: white;
+}
+.subtitle li:hover{
+  background-color: skyblue;
+}
 
-    }
 
-    .tag>.list a {
-      font-size: 14px;
-      line-height: 25px;
-      text-decoration: none;
-      color: blue;
-    }
+.subtitle a {
+  font-size: 14px;
+  line-height: 25px;
+  text-decoration: none;
+  color: blue;
+}
 
-    .tag>.list a:hover {
-      text-decoration: underline;
-    }
+.subtitle a:hover {
+  text-decoration: underline;
+}

@@ -48,5 +48,7 @@ header a:hover {
     top: 40px;
     bottom: 0px;
     width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
     background-color: lightgray;
 }
